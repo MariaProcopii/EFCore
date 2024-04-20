@@ -7,8 +7,6 @@ public class Driver
     public required string Email { get; set; }
     public List<Ride> CreatedRides { get; set; }
     public required string LicenseNumber { get; set; }
-    
-    public Guid VehicleTypeId { get; set; }
     public VehicleType VehicleType { get; set; }
     
 }

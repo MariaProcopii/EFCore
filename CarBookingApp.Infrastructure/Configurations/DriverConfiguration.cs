@@ -18,8 +18,8 @@ public class DriverConfiguration : IEntityTypeConfiguration<Driver>
 
         builder
             .HasOne(d => d.VehicleType)
-            .WithMany()
-            .HasForeignKey(d => d.VehicleTypeId);
+            .WithOne()
+            .HasForeignKey<VehicleType>(vt => vt.Id);
 
         builder
             .Property(d => d.Name)
